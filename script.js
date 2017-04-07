@@ -15,19 +15,25 @@ boxes[3].style.backgroundColor = "blanchedalmond";
 
 
 
-// When anyone clicks on the first box, call the function "boxClicked".
-boxes[0].addEventListener("click", boxClicked);
+ 
 
 // Variable to hold the current left margin.
 var leftMargin = 0;
+var leftMargin1 = 0; 
+var leftMargin2 = 0;
+var leftMargin3 = 0;
+var topMargin4 = 0;
 
 // Variable used to add to the left margin.
 var moveAmount = 5;
+var moveAmount1 = 10; 
+var moveAmount2 = 15;
+var moveAmount3 = 20;
+var moveAmount4 = 25;
 
 // Function that adds moveAmount to leftMargin then appends leftMargin
 // to the first box's margin left. Basically moving the box to the right.
 function boxClicked() {
-
     // 'console.log()' only displays in the browser console.
     // It's useful for you, the developer, to debug your code.
     console.log("Hey, box clicked!");
@@ -35,65 +41,37 @@ function boxClicked() {
     boxes[0].style.marginLeft = leftMargin + "px";
 }
 
-console.log(boxes[0]);
-
-
-// me.
-boxes[1].addEventListener("click", boxClicked); 
-
-var leftMargin = 0;
-var moveAmount = 10;
-
-function boxClicked() {
+function box2Clicked() {
     console.log("Hey, 2nd box clicked!");
-    leftMargin += moveAmount; 
-    boxes[1].style.marginLeft = leftMargin + "px";
+    leftMargin1 += moveAmount1; 
+    boxes[1].style.marginLeft = leftMargin1 + "px";
 }
 
-console.log(boxes[1]);
-
-
-boxes[2].addEventListener("click", boxClicked); 
-
-var leftMargin = 0;
-var moveAmount = 15;
-
-function boxClicked() {
+function box3Clicked() {
     console.log("Hey, 3rd box clicked!");
-    leftMargin += moveAmount; 
-    boxes[2].style.marginLeft = leftMargin + "px";
+    leftMargin2 += moveAmount2; 
+    boxes[2].style.marginLeft = leftMargin2 + "px";
 }
 
-console.log(boxes[2]);
-
-
-boxes[3].addEventListener("dblclick", boxClicked); 
-
-var leftMargin = 0;
-var moveAmount = 20;
-
-function boxClicked() {
+function box4Clicked() {
     console.log("Hey, 4th box dblclicked!");
-    leftMargin += moveAmount; 
-    boxes[3].style.marginLeft = leftMargin + "px";
+    leftMargin3 += moveAmount3; 
+    boxes[3].style.marginLeft = leftMargin3 + "px";
 }
 
-console.log(boxes[3]);
-
-
-boxes[4].addEventListener("click", boxClicked); 
-
-var topMargin = 0;
-var moveAmount = 25;
-
-function boxClicked() {
+function box5Clicked() {
     console.log("Hey, 5th box clicked!");
-    topMargin += moveAmount; 
-    boxes[4].style.marginTop = topMargin + "px";
+    topMargin4 += moveAmount4; 
+    boxes[4].style.marginTop = topMargin4 + "px";
 }
 
-console.log(boxes[4]);
 
+// When anyone clicks on the first box, call the function "boxClicked".
+boxes[0].addEventListener("click", boxClicked);
+boxes[1].addEventListener("click", box2Clicked); 
+boxes[2].addEventListener("click", box3Clicked); 
+boxes[3].addEventListener("dblclick", box4Clicked); 
+boxes[4].addEventListener("click", box5Clicked);
 
     // if (leftMargin < 100) {
     //     leftMargin += moveAmount;
