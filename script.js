@@ -10,6 +10,10 @@ boxes[1].style.backgroundColor = "purple";
 // For the 3rd box (index = 2), change the background color to "yellow".
 boxes[2].style.backgroundColor = "yellow";
 
+// When anyone clicks on the first box, call the function "boxClicked".
+boxes[0].addEventListener("click", boxClicked);
+
+
 // Variable to hold the current left margin.
 var leftMargin = 0;
 
@@ -27,5 +31,28 @@ function boxClicked() {
     boxes[0].style.marginLeft = leftMargin + "px";
 }
 
-// When anyone clicks on the first box, call the function "boxClicked".
-boxes[0].addEventListener("click", boxClicked);
+console.log(boxes[0]);
+
+
+// me.
+boxes[1].addEventListener("click", boxClicked); 
+
+var leftMargin = 0;
+var moveAmount = 10;
+
+function boxClicked() {
+    console.log("Hey, 2nd box clicked!");
+    leftMargin += moveAmount; 
+    boxes[1].style.marginLeft = leftMargin + "px";
+}
+
+
+console.log(boxes[1]);
+
+
+
+    // if (leftMargin < 100) {
+    //     leftMargin += moveAmount;
+    // } else {
+    //     leftMargin -= moveAmount;
+    // }
