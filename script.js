@@ -2,7 +2,7 @@
 var boxes = document.querySelectorAll(".box");
 
 // For the 1st box (index = 0), change the background color to "blue".
-boxes[0].style.backgroundColor = "blue";
+boxes[0].style.backgroundColor = "green";
 
 // For the 3rd box (index = 2), change the background color to "yellow".
 boxes[2].style.backgroundColor = "yellow";
